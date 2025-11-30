@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "http://localhost:4000";
+const API_BASE = process.env.NEXT_PUBLIC_API_BASE;
 
 function formatDate(value) {
   if (!value) return "-";
@@ -59,7 +59,6 @@ export default function HomePage() {
               Admin
             </span>
             <h1 className="text-3xl font-semibold">Job Import History</h1>
-            {/* <p className="text-sm text-slate-400">Pulls from Express backend at {API_BASE}</p> */}
           </div>
           <button
             onClick={handleTriggerImport}
